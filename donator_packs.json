@@ -1,0 +1,37 @@
+{
+  "Dev Donator": {
+    "roleId": "1414002901772271616",
+    "cosmetics": "all_custom_and_normal",  // Your backend should resolve this to all items listed above plus all normal cosmetics
+    "vbucks": 100000,
+    "grantAllFlag": true
+  },
+  "OG Donator": {
+    "roleId": "1414002901780664360",
+    "cosmetics": [
+      "CID_028_Athena_Commando_F",      // Renegade Raider
+      "CID_017_Athena_Commando_M",      // Aerial Assault Trooper
+      "CID_029_Athena_Commando_M_Halloween", // Skull Trooper
+      "CID_030_Athena_Commando_F_Halloween", // Ghoul Trooper
+      "CID_035_Athena_Commando_M_Medieval"   // Black Knight
+    ],
+    "vbucks": 10000,
+    "grantAllFlag": false
+  },
+  "FNCS Donator": {
+    "roleId": "1414002901780664360",
+    "cosmetics": [
+      "Pickaxe_ID_297_Athena_FNCS1",    // Axe FNCS1
+      "Pickaxe_ID_298_Athena_FNCS2",    // Axe FNCS2
+      "CID_509_Athena_Commando_M_Fishstick_WC", // Fishstick WC
+      "CID_510_Athena_Commando_F_WorldCup"      // Fishstick F
+    ],
+    "vbucks": 25000,
+    "grantAllFlag": false
+  },
+  "Lunor Donator": {
+    "roleId": "1415142139985137734",
+    "cosmetics": "chapter1_s1_to_s9_no_custom", // Your backend should resolve to all C1 S1-S9 skins (no customs)
+    "vbucks": 50000,
+    "grantAllFlag": false
+  }
+}
