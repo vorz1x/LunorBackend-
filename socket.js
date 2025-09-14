@@ -5,6 +5,10 @@ const { GameSession } = require('./session');
 const { AntiCheat } = require('./anticheat');
 const { Stats } = require('./models/stats');
 
+// Note: This server requires the 'ws' package for WebSocket functionality
+// Install with: npm install ws
+// The Redis adapter will use a mock implementation if Redis is not available
+
 const wss = new WebSocket.Server({ port: 4000 });
 const antiCheat = new AntiCheat();
 

@@ -1,5 +1,13 @@
-const redis = require('redis');
 const config = require('../config');
+
+// Try to require redis, but fall back to mock if not available
+let redis;
+try {
+  redis = require('redis');
+} catch (error) {
+  console.log('Redis module not found, using mock implementation');
+  redis = null;
+}
 
 class RedisAdapter {
   constructor() {
@@ -9,6 +17,14 @@ class RedisAdapter {
 
   async connect() {
     if (this.isConnected) return this.client;
+
+    // If redis module is not available, use mock client
+    if (!redis) {
+      console.log('Redis module not available, using mock client');
+      this.client = this.createMockClient();
+      this.isConnected = true;
+      return this.client;
+    }
 
     try {
       this.client = redis.createClient({
@@ -31,7 +47,9 @@ class RedisAdapter {
     } catch (error) {
       console.error('Failed to connect to Redis:', error);
       // For development, we'll create a mock Redis client
-      return this.createMockClient();
+      this.client = this.createMockClient();
+      this.isConnected = true;
+      return this.client;
     }
   }
 
