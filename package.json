@@ -1,0 +1,23 @@
+{
+  "name": "lunor-backend",
+  "version": "1.0.0",
+  "description": "Enhanced Fortnite/Lunor backend with matchmaking, anti-cheat, and session management",
+  "main": "socket.js",
+  "scripts": {
+    "start": "node socket.js",
+    "demo": "node /tmp/demo.js"
+  },
+  "keywords": ["fortnite", "backend", "websocket", "matchmaking", "anticheat"],
+  "dependencies": {
+    "ws": "^8.0.0",
+    "redis": "^4.0.0"
+  },
+  "optionalDependencies": {
+    "redis": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "LunorBackend Team",
+  "license": "MIT"
+}
